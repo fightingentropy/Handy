@@ -17,6 +17,23 @@ Handy was created to fill the gap for a truly open source, extensible speech-to-
 
 Handy isn't trying to be the best speech-to-text app—it's trying to be the most forkable one.
 
+## About This Fork
+
+This repository is a personal fork of [cjpais/Handy](https://github.com/cjpais/Handy). The goal is to stay close to upstream while documenting and maintaining a few local changes.
+
+Current fork-specific changes:
+
+- macOS minimum version raised to `10.15`
+- vendored `transcribe-rs` integration in `src-tauri/vendor/transcribe-rs-0.2.9-local`
+- `whisper-rs` upgraded to `0.15.1`
+- Whisper model loading updated to enable flash attention by default in the local vendored path
+
+This fork is intended to keep pulling updates from upstream Handy where possible, while preserving local experimentation and platform-specific tweaks.
+
+### Syncing With Upstream
+
+This fork tracks the upstream Handy project and is intended to keep rebasing or merging from [`cjpais/Handy`](https://github.com/cjpais/Handy) over time. Local patches may remain fork-only when they are experimental, machine-specific, or not yet appropriate for an upstream pull request.
+
 ## How It Works
 
 1. **Press** a configurable keyboard shortcut to start/stop recording (or use push-to-talk mode)
